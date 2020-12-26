@@ -1,0 +1,13 @@
+// Bootstrap Simple Form
+body{
+  margin: 15px 0 0 0;
+}
+.add {
+   padding-left: 850px;
+   padding-top: 10px;
+  
+}
+.inbtn{
+   color: white; 
+   background: #90b4ce;
+}

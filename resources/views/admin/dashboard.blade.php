@@ -4,10 +4,9 @@
 
 @section('content')
 
-
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="">
             <div class="box">
                 <a href="/location">
                 <p class="marvel">Location</p> </a>
@@ -17,17 +16,19 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="">
             <div class="box">
-                <p class="marvel">Users</p>
+                <a href="/users">
+                <p class="marvel">Users</p></a>
                 <img src="img/User.png" class="model">
                 <div class="details">
                 </div>	
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="">
             <div class="box">
-                <p class="marvel">Report</p>
+                <a href="/reports">
+                <p class="marvel">Report</p></a>
                 <img src="img/report.png" class="model">
                 <div class="details">
                 </div>

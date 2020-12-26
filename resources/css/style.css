@@ -87,3 +87,33 @@ a{
 }
 
 /* footer */
+
+/* tasks */
+table {
+	border-radius: 15px;
+	box-shadow: 0px 5px 20px 0px rgba(0,0,0,.05);
+	border-collapse: collapse;
+	font-family: 'Poppins', sans-serif;
+	font-size: .85rem;
+	overflow: hidden;
+	min-width: 600px;
+}
+#keywords th {
+	padding: 10px 15px;
+	text-align: left;
+	background: rgb(244,247,248);
+	color: rgba(0,0,0,.6);
+	font-weight: 500;
+}
+#keywords td {
+	padding: 12px 20px;
+}
+#keywords tr {
+	cursor: pointer;
+	transition: all .25s ease;
+	color: rgba(0,0,0,.6);
+}
+#keywords tbody tr:hover {
+	background: rgb(178, 194, 235);
+	color: r
+}

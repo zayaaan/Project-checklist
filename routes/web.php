@@ -14,18 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
-});
+    return view('admin.dashboard');
+})->middleware('auth');
 
 Route::resource('location','LocationsController');
-Route::resource('task','TaskController');
+Route::resource('tasks','TaskController');
+Route::resource('users','UsersController');
+
+Route::get('logout', 'Auth\LoginController@logout', function () {
+    return abort(404);
+});
+
+Route::get('/reports', 'TaskController@reports');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/tasks', function () {
-    return view('task.tasks');
-});
+// Route::get('/tasks', function () {
+//     return view('tasks.tasks');
+// });
 
 

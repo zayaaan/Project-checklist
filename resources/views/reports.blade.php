@@ -3,8 +3,10 @@
 <link href="{{ asset('css/task.css') }}" rel="stylesheet">
 
 @section('content')
+
+
 <div id="wrapper">
-  <h1>All Complete Tasks</h1>
+  <h1>REPORT</h1>
   <table id="keywords" cellspacing="0" cellpadding="0">
     <thead>
       <tr>
@@ -31,7 +33,5 @@
     </tbody>
   </table>
 </div>
-
-
 
 @endsection

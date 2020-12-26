@@ -82,16 +82,16 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
     </div>
     <!-- Footer -->
-<footer class="mb-2 text-dark fixed-bottom">
-   <div class="footer-copyright text-center py-3 ">© 2020 Copyright:
-        <a href=> CHECKLISTAPP</a>
-   </div>
-</footer>
+    <footer class="mb-2 text-dark fixed-bottom">
+        <div class="footer-copyright text-center py-3 ">© 2020 Copyright:
+            <a href=> CHECKLISTAPP</a>
+        </div>
+    </footer>
 </body>
 
 

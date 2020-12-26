@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Task;
 use App\Models\Location;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
@@ -16,6 +19,8 @@ class TaskController extends Controller
     public function index()
     {
         //
+        $tasks = Task::where('status', 'completed')->get();        
+        return view('tasks.tasks', compact('tasks'));
         
     }
 
@@ -52,6 +57,7 @@ class TaskController extends Controller
         $task->status =  $status;
 
         $task->save();
+        return redirect('tasks/create')->with('message', 'Task added successfully!');
     }
 
     /**
@@ -60,9 +66,13 @@ class TaskController extends Controller
      * @param  \App\Models\Task  $task
      * @return \Illuminate\Http\Response
      */
-    public function show(Task $task)
+    public function show($id)
     {
         //
+        
+        $taskLocations = Task::where('location_id', $id)->get();        
+        return view('tasks.show', compact('taskLocations'));
+
     }
 
     /**
@@ -71,9 +81,28 @@ class TaskController extends Controller
      * @param  \App\Models\Task  $task
      * @return \Illuminate\Http\Response
      */
-    public function edit(Task $task)
+    public function edit($id)
+
     {
         //
+        $username = Auth::user()->name;
+        // $dt = new DateTime();
+        // $updated_at = date("h:i A",strtotime(date) + 21600);
+        $tasks = Task::find($id);
+       
+        // $new2date = strtotime("h:i A",($date) + 21600));
+       
+        $status = 'completed';
+        $tasks->completed_by = $username;
+        $tasks->status = $status;
+        // $tasks->completed_date = $date;
+        $tasks->save();
+        return redirect('/tasks');
+
+
+        // return view('tasks.show', compact('id'));
+       //  return redirect('tasks', compact('id'));
+
     }
 
     /**
@@ -84,8 +113,9 @@ class TaskController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Task $task)
-    {
+    {                             
         //
+        dd('test');
     }
 
     /**
@@ -97,5 +127,15 @@ class TaskController extends Controller
     public function destroy(Task $task)
     {
         //
+        
+        $task->delete();
+        return redirect('/tasks');
+    }
+
+    public function reports() {
+        
+        $tasks = Task::where('status', 'completed')->get();        
+        return view('reports', compact('tasks'));
+
     }
 }

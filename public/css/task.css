@@ -1,4 +1,4 @@
-/*add task*/
+/* add task
 @import "compass/css3";
 
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
@@ -81,7 +81,7 @@ form {
 }
 
 
-/* Clearfix */
+Clearfix */
 .cf:before,
 .cf:after {
     content: " "; /* 1 */
@@ -91,3 +91,50 @@ form {
 .cf:after {
     clear: both;
 }
+
+/* tasks */
+table {
+	border-radius: 15px;
+	box-shadow: 0px 5px 20px 0px rgba(0,0,0,.05);
+	border-collapse: collapse;
+	font-family: 'Poppins', sans-serif;
+	font-size: .85rem;
+	overflow: hidden;
+	min-width: 600px;
+}
+#keywords th {
+	padding: 10px 15px;
+	text-align: left;
+	background: rgb(244,247,248);
+	color: rgba(0,0,0,.6);
+	font-weight: 500;
+}
+#keywords td {
+	padding: 12px 20px;
+}
+#keywords tr {
+	cursor: pointer;
+	transition: all .25s ease;
+	color: rgba(0,0,0,.6);
+}
+#keywords tbody tr:hover {
+	background: rgb(178, 194, 235);
+	color: r
+}
+#wrapper {
+   display: block;
+   width: 850px;
+   margin: 0 auto;
+   padding: 10px 17px;
+ }
+ h1 { 
+   font-family: sans-serif;
+   font-weight: bold;
+   font-size: 3.6em;
+   line-height: 1.7em;
+   margin-bottom: 10px;
+   text-align: center;
+ }
+ .h11 {
+    padding-right: 250px;
+ }

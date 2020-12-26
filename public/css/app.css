@@ -74,7 +74,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #f8f9fa;
+  background-color: #dee7f0;
   /* background-color: #f8fafc; */
   /* background-image: url(/CheckListApp/public/img/report.png); */
 }
@@ -8455,7 +8455,7 @@ button.bg-dark:focus {
 
 .mb-2,
 .my-2 {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.0rem !important;
 }
 
 .ml-2,

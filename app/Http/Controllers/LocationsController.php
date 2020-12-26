@@ -12,6 +12,11 @@ class LocationsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         //
@@ -64,6 +69,8 @@ class LocationsController extends Controller
         $location->image = $fullfilepath;
 
         $location->save();
+        return redirect('/location')->with('message', 'Task added successfully!');
+
       
     }
 
@@ -105,7 +112,7 @@ class LocationsController extends Controller
         request()->validate([
 
             'location_name' => ['required']
-
+ 
         ]);
 
         $location = Location::find($location)->first();
